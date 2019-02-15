@@ -11,8 +11,8 @@ type Client interface {
 }
 
 type CurrencyService interface {
-	GetCurrency(symbol CurrencySymbol) (*CurrencyResult, error)
-	GetCurrencies() (*CurrenciesResult, error)
+	GetCurrency(symbol CurrencySymbol) (*Currency, error)
+	GetCurrencies() (*[]Currency, error)
 }
 
 type MarketService interface {

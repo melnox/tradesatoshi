@@ -18,15 +18,15 @@ type Currency struct {
 }
 
 type CurrencyResult struct {
-	Success string     `json:"success"`
-	Message string     `json:"message"`
-	Result  []Currency `json:"result"`
+	Success bool     `json:"success"`
+	Message string   `json:"message"`
+	Result  Currency `json:"result"`
 }
 
 type CurrenciesResult struct {
-	Success string   `json:"success"`
-	Message string   `json:"message"`
-	Result  Currency `json:"result"`
+	Success bool       `json:"success"`
+	Message string     `json:"message"`
+	Result  []Currency `json:"result"`
 }
 
 type CurrencyBalance struct {
