@@ -10,7 +10,7 @@ import (
 )
 
 type CurrencyClient struct {
-	CurrencyService CurrencyService
+	CurrencyService
 }
 
 func NewCurrencyClient() *CurrencyClient {
