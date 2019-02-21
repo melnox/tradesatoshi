@@ -16,12 +16,12 @@ type CurrencyService interface {
 }
 
 type MarketService interface {
-	GetTicker(symbol MarketSymbol) (*TickerResult, error)
-	GetMarketStatus(symbol MarketSymbol) (*MarketStatusResult, error)
-	GetMarketHistory(symbol MarketSymbol, count int) (*MarketHistoryResult, error)
-	GetMarketSummary(symbol MarketSymbol) (*MarketSummaryResult, error)
+	GetTicker(symbol, baseSymbol CurrencySymbol) (*Market, error)
+	GetMarketStatus(symbol, baseSymbol CurrencySymbol) (*MarketStatus, error)
+	GetMarketHistory(symbol, baseSymbol CurrencySymbol, count int) (*[]Order, error)
+	GetMarketSummary(symbol, baseSymbol CurrencySymbol) (*MarketSummaryResult, error)
 	GetMarketSummaries() (*MarketSummariesResult, error)
-	GetOrderBook(symbol MarketSymbol, orderType string, count int) (*OrderBookResult, error)
+	GetOrderBook(symbol, baseSymbol CurrencySymbol, orderType string, count int) (*OrderBookResult, error)
 }
 
 type AccountService interface {

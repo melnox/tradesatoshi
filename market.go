@@ -11,7 +11,7 @@ type TickerResult struct {
 }
 
 type MarketStatusResult struct {
-	Success string       `json:"success"`
+	Success bool       `json:"success"`
 	Message string       `json:"message"`
 	Result  MarketStatus `json:"result"`
 }
@@ -22,7 +22,7 @@ type MarketStatus struct {
 }
 
 type MarketHistoryResult struct {
-	Success string  `json:"success"`
+	Success bool  `json:"success"`
 	Message string  `json:"message"`
 	Result  []Order `json:"result"`
 }
@@ -38,6 +38,8 @@ type Market struct {
 	Ask            decimal.Decimal `json:"ask"`
 	OpenBuyOrders  int             `json:"openBuyOrders"`
 	OpenSellOrders int             `json:"openSellOrders"`
+	MarketStatus   string          `json:"marketStatus"`
+	Change         decimal.Decimal `json:"change"`
 }
 
 type MarketSummaryResult struct {
