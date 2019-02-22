@@ -25,14 +25,14 @@ type MarketService interface {
 }
 
 type AccountService interface {
-	GetBalance(symbol MarketSymbol) (*GetBalanceResponse, error)
+	GetBalance(symbol CurrencySymbol) (*GetBalanceResponse, error)
 	GetBalances() (*GetBalancesResponse, error)
-	GenerateAddress(symbol MarketSymbol) (*GenerateAddressResponse, error)
-	SubmitWithdraw(symbol MarketSymbol, address string, amount decimal.Decimal, paymentId string) (*SubmitWithdrawResponse, error)
-	GetDeposits(symbol MarketSymbol, count int) (*GetDepositsResponse, error)
-	GetWithdrawals(symbol MarketSymbol, count int) (*GetWithdrawalsResponse, error)
-	SubmitTransfer(symbol MarketSymbol, username string, amount decimal.Decimal) (*SubmitTransferResponse, error)
-	SubmitTip(symbol MarketSymbol, numberActiveUsers int, amount decimal.Decimal, reason string) (*SubmitTipResponse, error)
+	GenerateAddress(symbol CurrencySymbol) (*GenerateAddressResponse, error)
+	SubmitWithdraw(symbol CurrencySymbol, address string, amount decimal.Decimal, paymentId string) (*SubmitWithdrawResponse, error)
+	GetDeposits(symbol CurrencySymbol, count int) (*GetDepositsResponse, error)
+	GetWithdrawals(symbol CurrencySymbol, count int) (*GetWithdrawalsResponse, error)
+	SubmitTransfer(symbol CurrencySymbol, username string, amount decimal.Decimal) (*SubmitTransferResponse, error)
+	SubmitTip(symbol CurrencySymbol, numberActiveUsers int, amount decimal.Decimal, reason string) (*SubmitTipResponse, error)
 }
 
 type OrderService interface {

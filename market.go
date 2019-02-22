@@ -11,7 +11,7 @@ type TickerResult struct {
 }
 
 type MarketStatusResult struct {
-	Success bool       `json:"success"`
+	Success bool         `json:"success"`
 	Message string       `json:"message"`
 	Result  MarketStatus `json:"result"`
 }
@@ -22,7 +22,7 @@ type MarketStatus struct {
 }
 
 type MarketHistoryResult struct {
-	Success bool  `json:"success"`
+	Success bool    `json:"success"`
 	Message string  `json:"message"`
 	Result  []Order `json:"result"`
 }

@@ -692,16 +692,16 @@ func testMarketService_GetOrderBook_Success(t *testing.T) {
 	expectedBuys := make([]tradesatoshi.OrderBookAggregate, 0)
 	expectedSells := make([]tradesatoshi.OrderBookAggregate, 0)
 
-	expectedBuys = append(expectedBuys, tradesatoshi.OrderBookAggregate{Quantity:decimal.NewFromFloat(0), Rate:decimal.NewFromFloat(0.015)})
-	expectedBuys = append(expectedBuys, tradesatoshi.OrderBookAggregate{Quantity:decimal.NewFromFloat(1), Rate:decimal.NewFromFloat(0.0075)})
+	expectedBuys = append(expectedBuys, tradesatoshi.OrderBookAggregate{Quantity: decimal.NewFromFloat(0), Rate: decimal.NewFromFloat(0.015)})
+	expectedBuys = append(expectedBuys, tradesatoshi.OrderBookAggregate{Quantity: decimal.NewFromFloat(1), Rate: decimal.NewFromFloat(0.0075)})
 
-	expectedSells = append(expectedSells, tradesatoshi.OrderBookAggregate{Quantity:decimal.NewFromFloat(0), Rate:decimal.NewFromFloat(0.00756150)})
-	expectedSells = append(expectedSells, tradesatoshi.OrderBookAggregate{Quantity:decimal.NewFromFloat(0), Rate:decimal.NewFromFloat(0.0077)})
-	expectedSells = append(expectedSells, tradesatoshi.OrderBookAggregate{Quantity:decimal.NewFromFloat(0), Rate:decimal.NewFromFloat(0.01)})
+	expectedSells = append(expectedSells, tradesatoshi.OrderBookAggregate{Quantity: decimal.NewFromFloat(0), Rate: decimal.NewFromFloat(0.00756150)})
+	expectedSells = append(expectedSells, tradesatoshi.OrderBookAggregate{Quantity: decimal.NewFromFloat(0), Rate: decimal.NewFromFloat(0.0077)})
+	expectedSells = append(expectedSells, tradesatoshi.OrderBookAggregate{Quantity: decimal.NewFromFloat(0), Rate: decimal.NewFromFloat(0.01)})
 
 	if err != nil {
 		t.Fatal(err)
-	} else if !reflect.DeepEqual(d, &tradesatoshi.OrderBookType{Buy:expectedBuys, Sell:expectedSells}) {
+	} else if !reflect.DeepEqual(d, &tradesatoshi.OrderBookType{Buy: expectedBuys, Sell: expectedSells}) {
 		t.Fatalf("unexpected result: %+v", d)
 	}
 }

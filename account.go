@@ -56,6 +56,7 @@ type WithdrawalResult struct {
 	CurrencyLong  string          `json:"CurrencyLong"`
 	Amount        decimal.Decimal `json:"Amount"`
 	Fee           decimal.Decimal `json:"Fee"`
+	Address string `json:"Address"`
 	Status        string          `json:"Status"`
 	Txid          string          `json:"Txid"`
 	Confirmations int             `json:"Confirmations"`

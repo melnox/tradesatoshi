@@ -1,12 +1,12 @@
 package http
 
 import (
-	"errors"
-	"github.com/shaunmza/tradesatoshi"
-	"net/url"
 	"encoding/json"
+	"errors"
 	"fmt"
+	"github.com/shaunmza/tradesatoshi"
 	"net/http"
+	"net/url"
 	"strconv"
 )
 
@@ -112,7 +112,6 @@ func (s *MarketService) GetMarketHistory(symbol, baseSymbol tradesatoshi.Currenc
 	if respBody.Success != true {
 		return nil, errors.New(fmt.Sprintf("Request failed. Message: %s", respBody.Message))
 	}
-
 
 	if len(respBody.Result) == 0 {
 		return nil, errors.New("Request failed. No result received")
